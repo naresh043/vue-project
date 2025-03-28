@@ -2,12 +2,12 @@
     <li>
       <base-card>
         <header>
-          <h3>{{ name }}</h3>
-          <button>Delete</button>
+          <h3>{{ title }}</h3>
+          <base-button mode="flat">Delete</base-button>
         </header>
         <p>{{ description }}</p>
         <nav>
-          <a :href="link">view resources</a>
+          <a :href="link" target="_blank">View Resource</a>
         </nav>
       </base-card>
     </li>
@@ -15,10 +15,10 @@
   
   <script>
   export default {
-    name: "LearningResources",
-    props: ["name", "title", "description", "link"],
+    props: ["id", "title", "description", "link"]
   };
   </script>
+  
   
   <style scoped>
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
